@@ -18,25 +18,60 @@ function CityCard({
       },
     });
   };
-const handExchange=(number)=>{
-  const cycleLength = 4; // Number of iterations in each cycle
-  const positiveIndices = [0, 1]; // Indices that should return true in each cycle
-  const negativeIndices = [2, 3]; // Indices that should return false in each cycle
-  const cycleIndex = Math.floor(number / cycleLength) % 2;
-  const index = number % cycleLength;
-  
-  if (positiveIndices.includes(index) && cycleIndex % 2 === 0) {
-    return true;
-  } else if (negativeIndices.includes(index) && cycleIndex % 2 === 1) {
-    return true;
-  } else {
-    return false;
-  }
+const handExchange=()=>{
+if(number==0)return true
+if(number == 1) return false
+if(number==2)return false
+if(number == 3) return true
+if(number==4)return true
+if(number == 5) return false
+if(number==6)return false
+if(number == 7) return true
+if(number==8)return true
+if(number == 9) return false
+if(number==10)return false
+if(number == 11) return true
+if(number==12)return true
+if(number == 13) return false
+if(number==14)return false
+if(number == 15) return true
+if(number==16)return true
+if(number == 17) return false
+if(number==18)return false
+if(number == 19) return true
+if(number==20)return true
+if(number == 21) return false
+if(number==22)return false
+if(number == 23) return true
+if(number==24)return true
+if(number == 25) return false
+if(number==26)return false
+if(number == 27) return true
+if(number==28)return true
+if(number == 29) return false
+if(number==30)return false
+if(number == 31) return true
+if(number==32)return true
+if(number == 33) return false
+if(number==34)return false
+if(number == 35) return true
+if(number==36)return true
+
+if(number == 37) return true
+if(number==38)return true
+if(number == 39) return false
+if(number==40)return false
+if(number == 41) return true
+if(number==42)return true
+if(number == 43) return false
+if(number==44)return false
+if(number == 45) return true
+if(number==46)return true
 
 }
 
   return (
-    <div className="city-card" onClick={() => handleNavigation('city')}>
+    <div className={ handExchange() ? "city-card":"city-cardx" } onClick={() => handleNavigation('city')}>
       <FontAwesomeIcon className = "right-arrow-icon" icon={faArrowCircleRight} size="1xs" />
       {number}
       <img src={flag} alt="country-flag" />

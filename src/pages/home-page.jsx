@@ -30,7 +30,7 @@ function HomePage() {
           <div className='indexa'>
           <CityCard
             key={country.name}
-            number={key % 4}
+            number={key}
             name={country.name}
             continent={country.continent}
             flag={country.flag}
