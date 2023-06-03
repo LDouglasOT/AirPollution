@@ -41,10 +41,10 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://zingy-sunflower-582c53.netlify.app)
+- [Live Demo Link](https://rainbow-kelpie-31fab6.netlify.app)
 
 ## 🚀 Video Presentation <a name="live-demo"></a>
-- [Video-presentation](https://www.loom.com/share/0a0b49385dc346559e470532fb07619b)
+- [Video-presentation](https://www.loom.com/share/9e6514fab000417b8d05e1e93d3bf1fa)
 
 <!-- GETTING STARTED -->
 ## 💻 Getting Started <a name="getting-started"></a>
