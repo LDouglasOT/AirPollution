@@ -53,7 +53,7 @@ img {
   background-color: var(--light-color);
 }
 
-.main-head-wrapper{
+.main-head-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,10 +61,10 @@ img {
   padding-right: 50px;
 }
 
-.flexer{
+.flexer {
   margin-left: auto;
 }
 
-.flexer h4{
-  margin: 0px;
+.flexer h4 {
+  margin: 1px;
 }
