@@ -16,10 +16,14 @@
 }
 
 .indexa {
-  width:50%;
+  width: 50%;
 }
 
 .flexer {
-margin-left: auto;
-margin-right: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.flexer h4 {
+  font-weight: bold;
 }
