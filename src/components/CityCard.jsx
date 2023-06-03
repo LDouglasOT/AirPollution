@@ -1,6 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
+
 
 function CityCard({
   name, continent, flag, lat, lon,
@@ -17,12 +20,12 @@ function CityCard({
   };
   return (
     <div className="city-card" onClick={() => handleNavigation('city')}>
-      <h4>{name}</h4>
-      <p>
-        lat :
-        {lat}
-      </p>
+      <FontAwesomeIcon className = "right-arrow-icon" icon={faArrowCircleRight} size="1xs" />
       <img src={flag} alt="country-flag" />
+      <div className='flexer'>
+      <h4>{name}</h4>
+      <h4>{lat}</h4>
+      </div>
     </div>
   );
 }

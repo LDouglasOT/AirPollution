@@ -42,6 +42,29 @@ img {
 }
 
 .city-card {
-  border: 1px solid rgb(29, 29, 29);
   margin: 5px;
+}
+
+.city-card li:nth-child(even) {
+  background-color: var(--dark-color);
+}
+
+.colorful-list li:nth-child(odd) {
+  background-color: var(--light-color);
+}
+
+.main-head-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-right: 50px;
+}
+
+.flexer{
+  margin-left: auto;
+}
+
+.flexer h4{
+  margin: 0px;
 }

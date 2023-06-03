@@ -20,7 +20,6 @@ const Pollution = () => {
 
   useEffect(() => {
     if(!pollutionData){
-
       dispatch(fetchPollutionData({country:data.name,lat:data.lat,lon:data.lon}))
       console.log(pollutionData)
     }
@@ -36,9 +35,13 @@ if(!pollutionData){
   return (
 <>
 <div className = "pollution-card-header">
-<FontAwesomeIcon className = "left-arrow-icon" onClick={handleGoBackButton} icon={faArrowLeft} size="1xs" />
+<div className="main-head-wrapper">
+  <FontAwesomeIcon className = "left-arrow-icon" onClick={handleGoBackButton} icon={faArrowLeft} size="1xs" />
+<div className="right-options">
 <FontAwesomeIcon className = "microphone-icon" icon={faMicrophone} size="1xs" />
 <FontAwesomeIcon className = "gear-icon" icon={faGear} size="1xs" />
+</div>
+  </div>
 </div>
 <div className="pollution-card">
 <div className="pollution-details">
