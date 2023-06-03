@@ -17,19 +17,39 @@ export const fetchPollutionData = createAsyncThunk('pollution/fetchPollutionData
   const data = await response.json();
 
   const { country } = params;
-  const { list: [{ main: { aqi: quality }, components: { co, no, no2 } }] } = data;
-  const stringQuality = quality === 1 ? 'Good' : quality === 2 ? 'Fair' : quality === 3 ? 'Moderate' : quality === 4 ? 'Poor' : quality === 5 ? 'Very Poor' : null;
+  const { list } = data;
+  const airData = list.length > 0 ? list[0] : null;
 
-  const airData = {
+  let stringQuality = null;
+  if (airData) {
+    const { main, components } = airData;
+    const { aqi: quality } = main;
+    stringQuality = getAirQualityString(quality);
+  }
+
+  const airDataObject = {
     country,
     stringQuality,
-    co,
-    no,
-    no2,
+    components: airData ? airData.components : null,
   };
 
-  return airData;
+  return airDataObject;
 });
+
+const getAirQualityString = (quality) => {
+  if (quality === 1) {
+    return 'Good';
+  } if (quality === 2) {
+    return 'Fair';
+  } if (quality === 3) {
+    return 'Moderate';
+  } if (quality === 4) {
+    return 'Poor';
+  } if (quality === 5) {
+    return 'Very Poor';
+  }
+  return null;
+};
 
 const pollutionSlice = createSlice({
   name: 'pollution',
@@ -37,19 +57,20 @@ const pollutionSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchPollutionData.pending, (state) => {
-        state.stats = 'loading';
-      })
+      .addCase(fetchPollutionData.pending, (state) => ({ ...state, stats: 'loading' }))
       .addCase(fetchPollutionData.fulfilled, (state, action) => {
-        state.stats = 'succeeded';
-        state.error = '';
         const { country, ...rest } = action.payload;
-        state.pollutionData[country] = rest;
+        return {
+          ...state,
+          stats: 'succeeded',
+          error: '',
+          pollutionData: {
+            ...state.pollutionData,
+            [country]: rest,
+          },
+        };
       })
-      .addCase(fetchPollutionData.rejected, (state, action) => {
-        state.stats = 'failed';
-        state.error = action.error.message;
-      });
+      .addCase(fetchPollutionData.rejected, (state, action) => ({ ...state, stats: 'failed', error: action.error.message }));
   },
 });
 

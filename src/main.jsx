@@ -8,24 +8,22 @@ import Pollution from './components/Pollution';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-import {fetchCountriesLists} from './redux/countriesSlice'
+import { fetchCountriesLists } from './redux/countriesSlice';
 
-store.dispatch(fetchCountriesLists())
+store.dispatch(fetchCountriesLists());
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />
+    element: <HomePage />,
   },
   {
     path: ':cities',
-    element: <Pollution />
+    element: <Pollution />,
   },
-])
+]);
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  </>,
-)
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>,
+);
