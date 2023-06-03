@@ -43,6 +43,8 @@ img {
 
 .city-card {
   margin: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .city-card li:nth-child(even) {
@@ -59,12 +61,4 @@ img {
   justify-content: space-between;
   flex-direction: row;
   padding-right: 50px;
-}
-
-.flexer {
-  margin-left: auto;
-}
-
-.flexer h4 {
-  margin: 1px;
 }

@@ -39,10 +39,12 @@
 ## 🛠 Built With <a name="built-with"></a>
  React-vite
 
-## 🚀 Live Demo <a href="https://647b5f8da098e0154cbfcde4--rainbow-kelpie-31fab6.netlify.app/" name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://zingy-sunflower-582c53.netlify.app)
 
 ## 🚀 Video Presentation <a name="live-demo"></a>
-- [Video-presentation](https://www.loom.com/share/0e8e15093eff4bb6b535463d2b015f56)
+- [Video-presentation](https://www.loom.com/share/0a0b49385dc346559e470532fb07619b)
 
 <!-- GETTING STARTED -->
 ## 💻 Getting Started <a name="getting-started"></a>
