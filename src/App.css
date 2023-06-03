@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.logo {
+  padding: 10px;
+  margin: 5px;
+}
+
+.right-options {
+  display: flex;
+}
+
+.indexa {
+  width: 50%;
+}
+
+.flexer {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.flexer h4 {
+  font-weight: bold;
+}
