@@ -14,7 +14,7 @@ const Pollution = () => {
   const handleGoBackButton = ()=>{
     navigate(-1)
   }
-
+  
   let pollutionData = useSelector(selectPollutionData(data.name))
   let dispatch = useDispatch()
 
@@ -22,11 +22,16 @@ const Pollution = () => {
     if(!pollutionData){
 
       dispatch(fetchPollutionData({country:data.name,lat:data.lat,lon:data.lon}))
+      console.log(pollutionData)
     }
-
 
   }, [data])
 
+if(!pollutionData){
+  return(
+    <div>Loading</div>
+  )
+}
 
   return (
 <>
@@ -37,12 +42,12 @@ const Pollution = () => {
 </div>
 <div className="pollution-card">
 <div className="pollution-details">
-  <h1>{data.name}</h1>
+  <h1>{data?.name}</h1>
   <h2>Pollution Data</h2>
   <p>Air Pollutants</p>
-  <p>no : {pollutionData.no}</p>
-  <p>co : {pollutionData.co}</p>
-  <p>no2 : {pollutionData.no2}</p>
+  <p>no : {pollutionData.components.no}</p>
+  <p>co : {pollutionData.components.co}</p>
+  <p>no2 : {pollutionData.components.no2}</p>
   <br />
   <p>Air Quality:  {pollutionData.stringQuality}</p>
 </div>
