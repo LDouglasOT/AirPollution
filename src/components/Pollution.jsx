@@ -45,7 +45,7 @@ if(!pollutionData){
 </div>
 <div className="pollution-card">
 <div className="pollution-details">
-  <h1>{data?.name}</h1>
+  <h1>{data.name}</h1>
   <h2>Pollution Data</h2>
   <p>Air Pollutants</p>
   <p>no : {pollutionData.components.no}</p>
