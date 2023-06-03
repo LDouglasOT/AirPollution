@@ -9,10 +9,10 @@ body {
 }
 
 .container {
-  display: grid;
-  justify-content: center;
-  flex-flow: wrap;
-  grid-template-columns: repeat(2, 1fr);
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ padding: 5px;
 }
 
 img {
@@ -45,7 +45,19 @@ img {
   margin: 5px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-top: 5px;
 }
+
+.city-cardx {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e44a85;
+  width: 100%;
+  padding-top: 10px;
+}
+
 
 .city-card li:nth-child(even) {
   background-color: var(--dark-color);

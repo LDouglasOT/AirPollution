@@ -7,6 +7,8 @@ function HomePage() {
   const dispatch = useDispatch();
   const countriesArray = useSelector(selectAllCountries);
   const [continent, setContinent] = useState('All');
+  let isEven = true;
+  let isOdd = false;
   const choice = [{ choice: 'All' }, { choice: 'Africa' }, { choice: 'Asia' }, { choice: 'Europe' }, { choice: 'Oceania' }, { choice: 'Americas' }];
   const handleContinentChange = (continent) => {
     dispatch(SelectedContinent(continent));
@@ -24,15 +26,18 @@ function HomePage() {
       </div>
 
       <div className="container">
-        {countriesArray.map((country) => (
+        {countriesArray.map((country,key) => (
+          <div className='indexa'>
           <CityCard
             key={country.name}
+            number={key % 4}
             name={country.name}
             continent={country.continent}
             flag={country.flag}
             lat={country.lat}
             lon={country.lon}
           />
+         </div>
         ))}
       </div>
     </>

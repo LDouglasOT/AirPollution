@@ -14,3 +14,12 @@
 .right-options {
   display: flex;
 }
+
+.indexa {
+  width:50%;
+}
+
+.flexer {
+margin-left: auto;
+margin-right: 20px;
+}
