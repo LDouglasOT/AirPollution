@@ -40,11 +40,11 @@ const Pollution = () => {
   <h1>{data.name}</h1>
   <h2>Pollution Data</h2>
   <p>Air Pollutants</p>
-  <p>no : {pollutionData?.no}</p>
-  <p>co : {pollutionData?.co}</p>
-  <p>no2 : {pollutionData?.no2}</p>
+  <p>no : {pollutionData.no}</p>
+  <p>co : {pollutionData.co}</p>
+  <p>no2 : {pollutionData.no2}</p>
   <br />
-  <p>Air Quality:  {pollutionData?.stringQuality}</p>
+  <p>Air Quality:  {pollutionData.stringQuality}</p>
 </div>
 </div>
 </>
